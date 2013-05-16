@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="www.besmart.info" default="build">
+<project name="project-name" default="build">
 
     <target name="build"
          depends="prepare,lint,composer,phpunit,apigen"/>
