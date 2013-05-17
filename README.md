@@ -5,6 +5,8 @@ Preparation
 -----------
 
   pear config-set auto_discover 1
+  
+  pear install pear.phpunit.de/PHPUnit
 
   pear install pear.phpqatools.org/phpqatools
   
