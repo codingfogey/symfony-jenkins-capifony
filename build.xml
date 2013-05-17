@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="www.besmart.info" default="build">
+<project name="prjectname" default="build">
 
     <target name="build"
             depends="clean, prepare, lint, phploc, pdepend, phpcpd, phpcs, phpmd, phpunit, phpcb, apigen"/>
