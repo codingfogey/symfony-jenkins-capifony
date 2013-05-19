@@ -1,0 +1,16 @@
+<project>
+    <target name="clean" description="Cleanup build artifacts">
+        <delete dir="${basedir}/build/api"/>
+        <delete dir="${basedir}/build/code-browser"/>
+        <delete dir="${basedir}/build/coverage"/>
+        <delete dir="${basedir}/build/logs"/>
+        <delete dir="${basedir}/build/pdepend"/>
+        <antcall target="symfony.clean" />
+    </target>
+
+    <target name="symfony.clean" description="Cleans up symfony data">
+        <delete file="${basedir}/composer.phar" />
+        <delete file="${basedir}/app/config/parameters.yml" />
+        <delete dir="${basedir}/app/cache" />
+    </target>
+</project>

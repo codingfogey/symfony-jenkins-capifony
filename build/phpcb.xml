@@ -1,0 +1,12 @@
+<project>
+    <target name="phpcb">
+        <exec executable="phpcb">
+            <arg value="--log"/>
+            <arg path="${basedir}/build/logs"/>
+            <arg value="--source"/>
+            <arg path="${basedir}/src"/>
+            <arg value="--output"/>
+            <arg path="${basedir}/build/code-browser"/>
+        </exec>
+    </target>
+</project>

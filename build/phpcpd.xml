@@ -1,0 +1,13 @@
+<project>
+    <target name="phpcpd" description="Find duplicate code using PHPCPD">
+        <exec executable="phpcpd">
+            <arg value="--log-pmd" />
+            <arg value="${basedir}/build/logs/pmd-cpd.xml" />
+            <arg value="--exclude" />
+            <arg value="app" />
+            <arg value="--exclude" />
+            <arg value="vendor" />
+            <arg path="${basedir}" />
+        </exec>
+    </target>
+</project>

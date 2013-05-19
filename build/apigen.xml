@@ -1,0 +1,15 @@
+<project>
+    <target name="apigen" description="Generate documentation using apigen">
+        <exec executable="apigen">
+            <arg value="--source" />
+            <arg path="${basedir}/src/" />
+            <arg value="--destination" />
+            <arg path="${basedir}/build/api/" />
+            <arg value="--exclude" />
+            <arg path="${basedir}/vendor/" />
+            <arg value="--update-check no" />
+            <arg value="--progressbar no" />
+            <arg value="--colors no" />
+        </exec>
+    </target>
+</project>

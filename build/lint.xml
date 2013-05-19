@@ -1,0 +1,34 @@
+<project>
+    <target name="lint"
+        description="Syntax check">
+        <apply executable="php" failonerror="true">
+            <arg value="-l" />
+
+            <fileset dir="${basedir}/app">
+                <include name="**/*.php" />
+                <exclude name="**/cache/**" />
+            </fileset>
+
+            <fileset dir="${basedir}/src">
+                <include name="**/*.php" />
+            </fileset>
+
+            <fileset dir="${basedir}/web">
+                <include name="**/*.php" />
+            </fileset>
+        </apply>
+
+        <apply executable="${basedir}/app/console" failonerror="true">
+            <arg value="twig:lint" />
+            <arg value="--env=test" />
+
+            <fileset dir="${basedir}/app/Resources">
+                <include name="**/*.twig" />
+            </fileset>
+
+            <fileset dir="${basedir}/src">
+                <include name="**/*.twig" />
+            </fileset>
+        </apply>
+    </target>
+</project>
