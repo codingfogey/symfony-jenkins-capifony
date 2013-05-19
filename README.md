@@ -1,5 +1,5 @@
-symfony-jenkins
-===============
+symfony-jenkins-capifony
+========================
 
 Preparation
 -----------
