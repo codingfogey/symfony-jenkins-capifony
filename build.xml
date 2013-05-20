@@ -19,4 +19,18 @@
     <import file="${project.build_dir}/apigen.xml" />
     <import file="${project.build_dir}/phpcb.xml" />
 
+    <target name="update" description="Update build scripts.">
+        <property name="base_url" value="https://raw.github.com/codingfogey/symfony-jenkins-capifony/master/build/" />
+        <httpget url="${base_url}/build.xml" dir="${project.build_dir}" />
+        <httpget url="${base_url}/clean.xml" dir="${project.build_dir}" />
+        <httpget url="${base_url}/lint.xml" dir="${project.build_dir}" />
+        <httpget url="${base_url}/pdepend.xml" dir="${project.build_dir}" />
+        <httpget url="${base_url}/phpcpd.xml" dir="${project.build_dir}" />
+        <httpget url="${base_url}/phpcs.xml" dir="${project.build_dir}" />
+        <httpget url="${base_url}/phpdcd.xml" dir="${project.build_dir}" />
+        <httpget url="${base_url}/phploc.xml" dir="${project.build_dir}" />
+        <httpget url="${base_url}/phpmd.xml" dir="${project.build_dir}" />
+        <httpget url="${base_url}/prepare.xml" dir="${project.build_dir}" />
+    </target>
+
 </project>
